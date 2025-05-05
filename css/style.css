@@ -1,0 +1,104 @@
+/* Ajout d'un style de base pour la page */
+* {
+  background-color: #535353;
+  color: #f5f5f5;
+  font-family: Arial, Helvetica, sans-serif;
+}
+/* Centrage des h1 */
+h1 {
+  text-align: center;
+}
+
+/*Gestion des rows et column pour couper la page en 2/3 */
+.row {
+  display: flex;
+}
+.column {
+  flex: 50%;
+}
+
+/* Ajout de padding pour les conteneurs, les mettres plutôt petits */
+.container {
+  padding: 16px;
+  width: 50%;
+  margin: auto;
+}
+
+/* gestion de la navbar, style normal, des liens et des hovers, ainsi que de la page active */
+.topnav {
+  background-color: #242323;
+  overflow: hidden;
+}
+.topnav a {
+  float: inline-start;
+  background-color: #242323;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 20px 24px;
+  text-decoration: none;
+  font-size: 20px;
+}
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+.topnav a.active {
+  background-color: #a7324f;
+  color: white;
+}
+
+/* Un bord blanc pour les formulaires */
+form {
+  border: 3px solid #f1f1f1;
+  margin: auto;
+}
+
+/* Les champs à remplir, 100% de la taille dispo + focus */
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+}
+input[type="text"]:focus,
+input[type="password"]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Style pour les boutons de validations (bouton de base ici) + hover */
+button {
+  background-color: #04aa6d;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+}
+button:hover {
+  opacity: 0.8;
+}
+
+/* Style du bouton annulation + lien */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+  text-decoration: none;
+}
+
+/* Style pour les tableaux des scors */
+td,
+th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  width: 50%;
+}
+th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #a7324f;
+  color: white;
+}

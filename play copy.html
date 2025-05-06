@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jouer</title>
+    <link rel="stylesheet" href="css\style.css" />
+    <link rel="icon" href="assets\favicon.ico" type="image/x-icon" />
+  </head>
+
+  <body>
+    <header role="banner">
+      <div class="topnav">
+        <a href="index.html">Accueil</a>
+        <a href="register.html">S'inscrire</a>
+        <a href="login.html">Se connecter</a>
+        <a href="profile.html">Profil</a>
+        <a class="active" href="play.html">Jouer</a>
+      </div>
+    </header>
+    <main role="main" tabindex="-1">
+      <div>
+        <h1>Memory Game</h1>
+        <a href="play.html"><h2>Play</h2></a>
+        <h2 id="score"></h2>
+      </div>
+      <section class="memory-game">
+      <div class="memory-card" data-framework="aurelia">
+        <img class="front-face" src="assets/images/1.webp" alt="Aurelia" />
+        <img class="back-face" src="assets/images/back.webp" alt="JS Badge" />
+      </div>
+      <div class="memory-card" data-framework="aurelia">
+        <img class="front-face" src="assets/images/1.webp" alt="Aurelia" />
+        <img class="back-face" src="assets/images/back.webp" alt="JS Badge" />
+      </div>
+
+      <div class="memory-card" data-framework="vue">
+        <img class="front-face" src="assets/images/2.webp" alt="Vue" />
+        <img class="back-face" src="assets/images/back.webp" alt="JS Badge" />
+      </div>
+      <div class="memory-card" data-framework="vue">
+        <img class="front-face" src="assets/images/2.webp" alt="Vue" />
+        <img class="back-face" src="assets/images/back.webp" alt="JS Badge" />
+      </div>
+
+      <div class="memory-card" data-framework="angular">
+        <img class="front-face" src="assets/images/3.webp" alt="Angular" />
+        <img class="back-face" src="assets/images/back.webp" alt="JS Badge" />
+      </div>
+      <div class="memory-card" data-framework="angular">
+        <img class="front-face" src="assets/images/3.webp" alt="Angular" />
+        <img class="back-face" src="assets/images/back.webp" alt="JS Badge" />
+      </div>
+
+      <div class="memory-card" data-framework="ember">
+        <img class="front-face" src="assets/images/4.webp" alt="Ember" />
+        <img class="back-face" src="assets/images/back.webp" alt="JS Badge" />
+      </div>
+      <div class="memory-card" data-framework="ember">
+        <img class="front-face" src="assets/images/4.webp" alt="Ember" />
+        <img class="back-face" src="assets/images/back.webp" alt="JS Badge" />
+      </div>
+
+      <div class="memory-card" data-framework="backbone">
+        <img class="front-face" src="assets/images/5.webp" alt="Backbone" />
+        <img class="back-face" src="assets/images/back.webp" alt="JS Badge" />
+      </div>
+      <div class="memory-card" data-framework="backbone">
+        <img class="front-face" src="assets/images/5.webp" alt="Backbone" />
+        <img class="back-face" src="assets/images/back.webp" alt="JS Badge" />
+      </div>
+
+      <div class="memory-card" data-framework="react">
+        <img class="front-face" src="assets/images/6.webp" alt="React" />
+        <img class="back-face" src="assets/images/back.webp" alt="JS Badge" />
+      </div>
+      <div class="memory-card" data-framework="react">
+        <img class="front-face" src="assets/images/6.webp" alt="React" />
+        <img class="back-face" src="assets/images/back.webp" alt="JS Badge" />
+      </div>
+    </section>
+    </main>
+
+    <footer role="contentinfo"></footer>
+    <script src="js/memory.js"></script>
+  </body>
+</html>

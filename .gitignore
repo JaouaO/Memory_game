@@ -37,6 +37,7 @@ Thumbs.db
 *.war
 
 # Large media files
+*.webp
 *.jpg
 *.mp4
 *.tiff

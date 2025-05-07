@@ -10,7 +10,7 @@
 .memory-game {
   
   width: 100%;
-  max-width: 700px;
+  max-width: 1700px;
   height: 700px;
   display: flex;
   margin: auto;
@@ -19,12 +19,11 @@
 }
 
 .memory-card {
-  width: 23%;
-  height: 32%;
+  width: 230px;
+  height:  320px;
   margin: clamp(3px, 5px, 6px);
   transform: scale(1);
   transform-style: preserve-3d;
-  transition: transform 0.5s;
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 }
 
@@ -45,7 +44,7 @@
   padding: 20px;
   position: absolute;
   border-radius: 5px;
-  background: #1c7ccc;
+  background: #39444d;
   backface-visibility: hidden;
 }
 
@@ -69,7 +68,7 @@ h1, h2 {
 /* Ajout de padding pour les conteneurs, les mettres plutôt petits */
 .container {
   padding: 16px;
-  width: 50%;
+  width: 80%;
   margin: auto;
 }
 

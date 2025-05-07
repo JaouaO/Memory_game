@@ -3,7 +3,6 @@ button.addEventListener("click", (event) => {
   setTimeout(() => {
     jeu();
   }, 100);
-  console.log("testazdazdazd");
 });
 
 function jeu() {
@@ -14,7 +13,7 @@ function jeu() {
   let firstCard, secondCard;
   let score = 0;
   const scoreMessage = document.getElementById("score");
-  let numPairs = 6;
+  let numPairs = document.getElementById("quantity").value;
 
   scoreMessage.innerText = "score : " + score;
 
@@ -68,7 +67,7 @@ function jeu() {
     if (numPairs == 0) {
       setTimeout(() => {
         alert("Tu as gagné ! Ton score : " + score);
-      }, 1500);
+      }, 1000);
     }
   }
 

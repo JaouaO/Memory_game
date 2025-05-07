@@ -32,7 +32,6 @@ radioButton.addEventListener("change", function (event) {
   for (i = 0; i < ele.length; i++) {
     if (ele[i].checked) {
       let maxValue;
-      console.log("alors ?" + ele[i].value);
 
       switch (ele[i].value) {
         case "eni":
@@ -67,10 +66,10 @@ button.addEventListener("click", (event) => {
   const gamePlacement = document.getElementById("gamePlacement");
   gamePlacement.innerHTML = "<div></div>";
   let numPairs = document.getElementById("quantity").value;
-  console.log("test" + numPairs);
   const randomizedNumberSet = new Set();
   while (randomizedNumberSet.size < numPairs) {
     randomizedNumberSet.add(Math.floor(Math.random() * selectedSet.length));
+
   }
   const randomizedNumberArray = [...randomizedNumberSet];
   for (let i = 1; i <= numPairs; i++) {
@@ -83,18 +82,16 @@ button.addEventListener("click", (event) => {
 function addcard(i, j, selectedSet) {
   let nameFront = selectedSet[j][1];
   let nameBack = "";
-  let numCard = j;
+  let numCard = j+1;
     if (selectedSet != randomSet) {
     nameBack = selectedSet[j][1];
   } else {
     nameBack = "random";
     numCard = selectedSet[j][0];
-    console.log(selectedSet[j][0]);
   }
 
   const gamePlacement = document.getElementById("gamePlacement");
   let card = gamePlacement.cloneNode(true);
-  console.log("test" + i);
   card.name = "card" + i;
   card.classList.remove("memory-game");
   card.classList.add("memory-card");
@@ -108,7 +105,6 @@ function initSet(setName, setNum, name) {
   for (let i = 1; i <= setNum; i++) {
     setName[i - 1] = [i, name];
   }
-  console.log(setName);
 }
 
 function addSetToRandom(setName, setNum, i) {
@@ -116,7 +112,6 @@ function addSetToRandom(setName, setNum, i) {
     randomSet[i] = setName[j];
     i++;
   }
-  console.log(randomSet);
 }
 
 function initRandom() {

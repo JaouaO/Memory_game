@@ -83,10 +83,13 @@ button.addEventListener("click", (event) => {
 function addcard(i, j, selectedSet) {
   let nameFront = selectedSet[j][1];
   let nameBack = "";
-  if (selectedSet != randomSet) {
+  let numCard = j;
+    if (selectedSet != randomSet) {
     nameBack = selectedSet[j][1];
   } else {
     nameBack = "random";
+    numCard = selectedSet[j][0];
+    console.log(selectedSet[j][0]);
   }
 
   const gamePlacement = document.getElementById("gamePlacement");
@@ -97,7 +100,7 @@ function addcard(i, j, selectedSet) {
   card.classList.add("memory-card");
   card.innerHTML =
     `<img class="front-face" src="assets/images/${nameFront}/` +
-    `${i}.webp" alt="${i}" />\n<img class="back-face" src="assets/images/${nameBack}/back.webp" alt="back" />`;
+    `${numCard}.webp" alt="${i}" />\n<img class="back-face" src="assets/images/${nameBack}/back.webp" alt="back" />`;
   gamePlacement.appendChild(card);
 }
 

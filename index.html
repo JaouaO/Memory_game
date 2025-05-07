@@ -18,33 +18,101 @@
       </div>
     </header>
     <main role="main" tabindex="-1">
-      <div class="row">
-        <div class="column">
-          <h1>Accueil</h1>
-          <h2>Explication du jeu</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod,
-            necessitatibus inventore modi repellendus ipsam neque doloribus
-            dolores ut provident optio!
-          </p>
+      <h1>Accueil</h1>
+      <h2>Explication du jeu</h2>
+      <!-- Slideshow container -->
+      <div class="slideshow-container">
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 7</div>
+          <img
+            src="assets\explications\choix.webp"
+            alt="jeu"
+            style="width: 100%"
+          />
+          <div class="text">Choix du set de cartes et du nombre de paires</div>
         </div>
-        <div class="column">
-          <img src="assets\Memory-chien-10-paires.jpg" alt="jeu" />
-          <img src="assets\Memory-chien-10-paires.jpg" alt="jeu 2" />
-          <img src="assets\Memory-chien-10-paires.jpg" alt="jeu 3" />
+
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 7</div>
+          <img
+            src="assets\explications\jeulance.webp"
+            alt="jeu"
+            style="width: 100%"
+          />
+          <div class="text">Le jeu est lancé avec succès</div>
         </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 7</div>
+          <img
+            src="assets\explications\mauvais.webp"
+            alt="jeu 2"
+            style="width: 100%"
+          />
+          <div class="text">On retourne deux cartes, ici elles ne correspondent pas</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">4 / 7</div>
+          <img
+            src="assets\explications\mauvais2.webp"
+            alt="jeu 2"
+            style="width: 100%"
+          />
+          <div class="text">Elles sont donc à nouveau face cachée</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">5 / 7</div>
+          <img
+            src="assets\explications\bon.webp"
+            alt="jeu 2"
+            style="width: 100%"
+          />
+          <div class="text">Ici on a deux qui correspondent</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">6 / 7</div>
+          <img
+            src="assets\explications\bon2.webp"
+            alt="jeu 2"
+            style="width: 100%"
+          />
+          <div class="text">Elles restent donc face visible et on peut continuer à retourner des cartes</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">7 / 7</div>
+          <img
+            src="assets\explications\victoire.webp"
+            alt="jeu 2"
+            style="width: 100%"
+          />
+          <div class="text">Quand elles sont toutes retournées, c'est la victoire, et on voit notre score</div>
+        </div>
+
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
       </div>
-      <h2>Autre</h2>
-      <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat, quo?
-        Nesciunt, distinctio ducimus, placeat impedit aliquid excepturi illo, a
-        repudiandae mollitia consequuntur suscipit. Temporibus cum perferendis
-        numquam labore dignissimos asperiores laborum maiores adipisci illum.
-        Dolore dolorum quis consequatur assumenda ad.
-      </p>
+      <br />
+
+      <!-- The dots/circles -->
+      <div style="text-align: center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+        <span class="dot" onclick="currentSlide(6)"></span>
+        <span class="dot" onclick="currentSlide(7)"></span>
+      </div>
     </main>
 
     <footer role="contentinfo"></footer>
+    <script src="js/slideshow.js"></script>
     <script src="js/app.js"></script>
   </body>
 </html>

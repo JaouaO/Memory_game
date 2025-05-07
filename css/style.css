@@ -1,3 +1,5 @@
+
+/* Style pour un peu tout */
 * {
   padding: 0;
   margin: 0;
@@ -7,6 +9,7 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Là où vont les cartes*/
 .memory-game {
   width: 100%;
   max-width: 1700px;
@@ -17,6 +20,7 @@
   perspective: 1000px;
 }
 
+/* style pour chaque carte et leur transformations (pour qu'elles puissen se retourner*/
 .memory-card {
   width: 230px;
   height: 320px;
@@ -26,15 +30,18 @@
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 }
 
+/* Mise en valeur de la carte selectionnée*/
 .memory-card:active {
   transform: scale(0.9);
   transition: transform 0.2s;
 }
 
+/* retournement carte*/
 .memory-card.flip {
   transform: rotateY(180deg);
 }
 
+/* style pour les cartes*/
 .front-face,
 .back-face {
   overflow: hidden;
@@ -46,7 +53,7 @@
   background: #39444d;
   backface-visibility: hidden;
 }
-
+/* dif entre front et back*/
 .front-face {
   transform: rotateY(180deg);
 }
@@ -116,6 +123,8 @@ input[type="password"]:focus {
   outline: none;
 }
 
+/* Mettre une petite croix ou validé si c'est bon ou pas*/
+
 input + span {
   position: relative;
 }
@@ -142,6 +151,8 @@ input:valid + span::before {
   color: rgb(0, 255, 0);
 }
 
+
+/* pour que l'info des inscrutciton mdp soient moins visibles*/
 #infoMDP{
   font-size: smaller;
   color: #ccc;
@@ -201,12 +212,15 @@ th {
   outline: 2px solid #f00;
 }
 
+
+/*Pour que ce soit plus lisbile */
 #submitQuantity,
 #quantity,
 #bigLabel {
   font-size: larger;
 }
 
+/* pour faire faible moyen fort en couleurs différentes*/
 span:nth-of-type(1){
   color: #a7324f;
 }

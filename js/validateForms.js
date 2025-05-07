@@ -4,6 +4,8 @@ const password = document.getElementById("password"),
 
 const regEx = /(?=.*\d)(?=.*[a-z])(?=.*[^\w\s]).{6,}/;
 
+
+/* vérifie la validité et la force du mdp, si c'est pas bon met le petit message qui va bien*/
 function validatePassword() {
   confirm_password.setCustomValidity(
     password.value != confirm_password.value
@@ -23,5 +25,7 @@ function validatePassword() {
   }
 }
 
+
+/* check si c'est bon*/
 password.onchange = validatePassword;
 confirm_password.onkeyup = validatePassword;

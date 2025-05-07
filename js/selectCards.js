@@ -13,6 +13,8 @@ const cuteName = "cute";
 const cultureName = "culture";
 const randomName = "random";
 
+
+/* initialisation des sets en fonction du nom, et du nombre de possibilités*/
 initSet(eniSet, eniSetNum, eniName);
 initSet(cultureSet, cultureSetNum, cultureName);
 initSet(cuteSet, cuteSetNum, cuteName);
@@ -21,11 +23,12 @@ initRandom();
 const radioButton = document.getElementById("radioSelect");
 const quantitySelector = document.getElementById("quantity");
 
+/* préselectionne le set Eni de base*/
 let selectedSet = eniSet;
 document.getElementById("radioEni").checked = true;
 
 
-
+/*permet de changer de set, et d'empecher de mettre plus de paires que le nombre dispo */
 radioButton.addEventListener("change", function (event) {
   let ele = document.getElementsByName("test");
 
@@ -61,6 +64,7 @@ radioButton.addEventListener("change", function (event) {
 
 let button = document.getElementById("submitQuantity");
 
+/*idem globalement, double check au cas où */
 button.addEventListener("click", (event) => {
   event.preventDefault();
 
@@ -96,6 +100,8 @@ function f(){
     }
   }
 }
+
+/* initialise le jeu en fonction du set et du nbre de cartes*/
 f();
 
   const gamePlacement = document.getElementById("gamePlacement");
@@ -114,6 +120,8 @@ f();
   }
 });
 
+
+/* idem*/
 function addcard(i, j, selectedSet) {
   let nameFront = selectedSet[j][1];
   let nameBack = "";

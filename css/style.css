@@ -8,7 +8,6 @@
 }
 
 .memory-game {
-  
   width: 100%;
   max-width: 1700px;
   height: 700px;
@@ -20,7 +19,7 @@
 
 .memory-card {
   width: 230px;
-  height:  320px;
+  height: 320px;
   margin: clamp(3px, 5px, 6px);
   transform: scale(1);
   transform-style: preserve-3d;
@@ -53,7 +52,8 @@
 }
 
 /* Centrage des h1 */
-h1, h2 {
+h1,
+h2 {
   text-align: center;
 }
 
@@ -116,6 +116,37 @@ input[type="password"]:focus {
   outline: none;
 }
 
+input + span {
+  position: relative;
+}
+
+input + span::before {
+  position: absolute;
+  right: -20px;
+  top: 5px;
+}
+
+input:invalid {
+  border: 2px solid red;
+}
+
+input:invalid + span::before {
+  content: "✖";
+  font-size: larger;
+  color: red;
+}
+
+input:valid + span::before {
+  content: "✓";
+  font-size: larger;
+  color: rgb(0, 255, 0);
+}
+
+#infoMDP{
+  font-size: smaller;
+  color: #ccc;
+}
+
 /* Style pour les boutons de validations (bouton de base ici) + hover */
 button {
   background-color: #04aa6d;
@@ -137,12 +168,12 @@ button:hover {
   text-decoration: none;
 }
 
-/* Style pour les tableaux des scors */
+/* Style pour les tableaux des scores */
 td,
 th {
   border: 1px solid #ddd;
   padding: 8px;
-  width: 50%;
+  width: 10%;
 }
 th {
   padding-top: 12px;
@@ -153,7 +184,7 @@ th {
 }
 
 /* HIDE RADIO */
-[type=radio] { 
+[type="radio"] {
   position: absolute;
   opacity: 0;
   width: 0;
@@ -161,15 +192,27 @@ th {
 }
 
 /* IMAGE STYLES */
-[type=radio] + img {
+[type="radio"] + img {
   cursor: pointer;
 }
 
 /* CHECKED STYLES */
-[type=radio]:checked + img {
+[type="radio"]:checked + img {
   outline: 2px solid #f00;
 }
 
-#submitQuantity, #quantity, #bigLabel{
-    font-size: larger;
+#submitQuantity,
+#quantity,
+#bigLabel {
+  font-size: larger;
+}
+
+span:nth-of-type(1){
+  color: #a7324f;
+}
+span:nth-of-type(2){
+  color: #c9bb42;
+}
+span:nth-of-type(3){
+  color: #1eff00;
 }

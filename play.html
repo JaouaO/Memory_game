@@ -21,8 +21,6 @@
     <main role="main" tabindex="-1">
       <div>
         <h1>Memory Game</h1>
-        <a href="play.html"><h2>Play</h2></a>
-
         <h2 id="score"></h2>
       </div>
 
@@ -46,11 +44,11 @@
             <img src="assets/images/random/back.webp" alt="random" />
           </label>
         </div>
-        <label for="quantity">Select a quantity:</label>
+        <label for="quantity" id="bigLabel">Choisissez un nombre de paires</label>
 
         <input type="number" id="quantity" name="quantity" min="1" max="6" value="6"/>
 
-        <input type="submit" id="submitQuantity" />
+        <button type="submit" id="submitQuantity">Jouer avec cette sélection</button>
       </form>
       <section id="gamePlacement" class="memory-game">
         <div></div>

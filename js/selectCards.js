@@ -63,6 +63,41 @@ let button = document.getElementById("submitQuantity");
 
 button.addEventListener("click", (event) => {
   event.preventDefault();
+
+function f(){
+  let ele = document.getElementsByName("test");
+
+  for (i = 0; i < ele.length; i++) {
+    if (ele[i].checked) {
+      let maxValue;
+
+      switch (ele[i].value) {
+        case "eni":
+          maxValue = eniSetNum;
+          selectedSet = eniSet;
+          break;
+        case "culture":
+          maxValue = cultureSetNum;
+          selectedSet = cultureSet;
+          break;
+        case "cute":
+          maxValue = cuteSetNum;
+          selectedSet = cuteSet;
+          break;
+        case "random":
+          maxValue = randomSetNum;
+          selectedSet = randomSet;
+          break;
+      }
+      quantitySelector.max = maxValue;
+      if (quantitySelector.value > maxValue) {
+        quantitySelector.value = maxValue;
+      }
+    }
+  }
+}
+f();
+
   const gamePlacement = document.getElementById("gamePlacement");
   gamePlacement.innerHTML = "<div></div>";
   let numPairs = document.getElementById("quantity").value;

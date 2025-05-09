@@ -30,6 +30,7 @@
               type="text"
               placeholder="Entrez votre mail"
               name="mail"
+              id="loginMail"
               required
             />
             <span></span>
@@ -41,13 +42,14 @@
               type="password"
               placeholder="Entrez votre mot de passe"
               name="psw"
+              id="loginPsw"
               required
             />
             <span></span>
           </div>
           <br>
           <!--Bouton pour valider-->
-          <button type="submit">connexion</button>
+          <button id="loginSubmit" type="submit">connexion</button>
           <!--Partie temporaire à utiliser ou non selon le temps-->
           <!-- <label>
             <input type="checkbox" checked="checked" name="remember" /> Remember
@@ -67,5 +69,6 @@
 
     <footer role="contentinfo"></footer>
     <script src="js/app.js"></script>
+    <script src="js/score_profils.js"></script>
   </body>
 </html>

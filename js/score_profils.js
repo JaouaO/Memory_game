@@ -1,7 +1,10 @@
 const username = document.getElementById("username"),
   email = document.getElementById("email"),
   registerButton = document.getElementById("registerButton"),
-  registerForm = document.getElementById("registerForm");
+  registerForm = document.getElementById("registerForm"),
+  loginMail = document.getElementById(loginMail),
+  loginPsw = document.getElementById(loginPsw),
+  loginSubmit = document.getElementById("loginSubmit");
 
 //confirm_password, password
 let currProfile, newProfile;
@@ -48,6 +51,20 @@ registerButton.addEventListener("click", (event) => {
     alert("Profil bien créé, vous pouvez vous connecter");
   }
 });
+
+loginSubmit.addEventListener("click", (event) => {
+  event.preventDefault();
+  if (registerForm.checkValidity()) {
+    for (const j of dataUsers) {
+      if (loginMail === j.email && loginPsw === j.password) {      
+    alert("Vous êtes connecté");
+      }
+    }
+
+  }
+});
+
+
 
 updateScores(score, bestScores);
 

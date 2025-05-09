@@ -1,10 +1,7 @@
 const username = document.getElementById("username"),
   email = document.getElementById("email"),
   registerButton = document.getElementById("registerButton"),
-  registerForm = document.getElementById("registerForm"),
-  loginMail = document.getElementById(loginMail),
-  loginPsw = document.getElementById(loginPsw),
-  loginSubmit = document.getElementById("loginSubmit");
+  registerForm = document.getElementById("registerForm");
 
 //confirm_password, password
 let currProfile, newProfile;
@@ -24,9 +21,7 @@ fetch("js/data.json")
   });
 
 let dataUsers1 = localStorage.getItem("users");
-console.log(dataUsers1);
 let dataUsers = JSON.parse(dataUsers1);
-console.log(dataUsers);
 
 let score = [],
   bestScores = [
@@ -47,20 +42,7 @@ registerButton.addEventListener("click", (event) => {
     };
     dataUsers.push(newProfile);
     localStorage.setItem("users", JSON.stringify(dataUsers));
-    console.log(dataUsers);
     alert("Profil bien créé, vous pouvez vous connecter");
-  }
-});
-
-loginSubmit.addEventListener("click", (event) => {
-  event.preventDefault();
-  if (registerForm.checkValidity()) {
-    for (const j of dataUsers) {
-      if (loginMail === j.email && loginPsw === j.password) {      
-    alert("Vous êtes connecté");
-      }
-    }
-
   }
 });
 
@@ -80,7 +62,6 @@ function updateScores(score, bestScores) {
 
 function checkSubmitMatch(item1, item2) {
   for (const j of item2) {
-    console.log(j.email);
     if (item1 === j.email || item1 === j.username) {
       return true;
     }
@@ -88,7 +69,6 @@ function checkSubmitMatch(item1, item2) {
   return false;
 }
 function checkMail() {
-  console.log("test");
   email.setCustomValidity(
     checkSubmitMatch(email.value.trim(), dataUsers)
       ? "Cet email est déjà utilisé"
